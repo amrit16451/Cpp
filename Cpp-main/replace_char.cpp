@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+void replacepi(string s){
+
+    if (s.length()==0)
+    {
+        return;
+    }
+       
+    if (s[0]=='p' && s[1]=='i')
+    {
+        cout<<"3.14";
+        replacepi(s.substr(2));//trims 0th and 1st element out
+    }
+    else
+    {
+        cout<<s[0];
+        replacepi(s.substr(1));
+    }
+}
+int main(){
+    replacepi("knscpibccejepi");
+    return 0;
+} 
