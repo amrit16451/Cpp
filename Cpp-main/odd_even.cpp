@@ -23,7 +23,6 @@ int main()
     {
         cout << re_arr[i] << " ";
     }
-    
 
     return 0;
 }

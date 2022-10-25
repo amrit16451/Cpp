@@ -18,23 +18,20 @@ public:
     {
         return c;
     }
-    void multiply(int x, int y, int z)
+    int multiply(int x, int y, int z)
     {
-        a = x;
-        b = y;
-        c = x * y * z;
-        cout << c << endl;
+        int ans = x * y * z;
+        cout << ans << endl;
     }
-    void multiply(int x, int y)
+    int multiply(int x, int y)
     {
         a = x;
         b = y;
         c = x * y;
-        cout << c << endl;
+        return c;
     }
     int sum(int x, int y)
     {
-
         return x + y;
     }
 };
@@ -46,8 +43,8 @@ int main()
     s.set(x, z);
     cout << s.get() << endl;
     s.multiply(x, z, 5);
-    s.multiply(4, x);
-    cout << s.sum(4, 3);
+    cout << s.multiply(4, x) << endl;
+    cout << s.sum(4, 3) << endl;
 
     return 0;
 }
