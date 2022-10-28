@@ -1,21 +1,21 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     int rows;
-    cout<<"Enter the number of rows:";
-    cin>>rows;
+    cout << "Enter the number of rows:";
+    cin >> rows;
 
     for (int i = 1; i <= rows; i++)
     {
-        /* code */
         for (int j = 1; j <= i; j++)
         {
-            /* code */
+            //cout << pow(2, j) << " ";
             cout<<"*";
         }
-        cout<<"\n";   
+        cout << "\n";
     }
-    
+
     return 0;
 }

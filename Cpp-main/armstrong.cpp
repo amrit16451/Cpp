@@ -7,14 +7,14 @@ int main()
     int n;
     cin >> n;
     int sum = 0;
-    int originaln = n;
+    int original = n;
     while (n > 0)
     {
         int lastdigit = n % 10;
         sum += pow(lastdigit, 3);
         n = n / 10;
     }
-    if (originaln == sum)
+    if (original == sum)
     {
         cout << "ARMSTONG NUMBER";
     }
