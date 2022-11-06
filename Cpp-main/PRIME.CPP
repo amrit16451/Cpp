@@ -3,29 +3,25 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
-    while (n--)
+    int count = 0;
+
+    for (int i = 1; i <= 100; i++)
     {
-        int count = 0;
-        for (int i = 2; i < n; i++)
+        bool check = 0;
+        for (int j = 2; j <= i / 2; j++)
         {
-            if (n % i == 0)
+            if (i % j == 0)
             {
-                count++;
+                check = 1;
             }
         }
-
-        if (count >= 1)
+        if (check == 0 && i != 1)
         {
-            cout << n << "->not prime" << endl;
+            count++;
+            cout << i << " ";
         }
-        else
-        {
-            cout << n << "->prime" << endl;
-        }
-        /* code */
     }
-
+    cout << endl;
+    cout << count;
     return 0;
 }

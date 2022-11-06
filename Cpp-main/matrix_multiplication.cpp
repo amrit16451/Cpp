@@ -1,49 +1,45 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-    int n1,n2,n3;
-    cin>>n1>>n2>>n3;
+int main()
+{
+    int n1, n2, n3;
+    cin >> n1 >> n2 >> n3;
 
-    //first array
+    // first array
     int arr1[n1][n2];
     int arr2[n2][n3];
     int ans[n1][n3];
-    cout<<"first array"<<endl;
+    cout << "first array" << endl;
 
-    for (int i = 0; i < n1; i++)//kon se row mai data jaega
+    for (int i = 0; i < n1; i++) // kon se row mai data jaega
     {
-        for (int j = 0; j < n2; j++)//data jo us row mai jaega 
+        for (int j = 0; j < n2; j++) // data jo us row mai jaega
         {
-            cin>>arr1[i][j];
+            cin >> arr1[i][j];
         }
-        
     }
-    cout<<endl;
-    //2nd array
+    cout << endl;
+    // 2nd array
 
-    cout<<"second array"<<endl;
-    for (int i = 0; i < n2; i++)//kon se row mai data jaega
+    cout << "second array" << endl;
+    for (int i = 0; i < n2; i++) // kon se row mai data jaega
     {
-        for (int j = 0; j < n3; j++)//data jo us row mai jaega 
+        for (int j = 0; j < n3; j++) // data jo us row mai jaega
         {
-            cin>>arr2[i][j];
+            cin >> arr2[i][j];
         }
-        
     }
-    cout<<endl;
+    cout << endl;
 
-    //ans array
-
-    
+    // ans array
 
     for (int i = 0; i < n1; i++)
     {
         for (int j = 0; j < n3; j++)
         {
-            ans[i][j]=0;
+            ans[i][j] = 0;
         }
-        
     }
     for (int i = 0; i < n1; i++)
     {
@@ -51,23 +47,20 @@ int main(){
         {
             for (int k = 0; k < n2; k++)
             {
-                ans[i][j]+=arr1[i][k]*arr2[k][j];
+                ans[i][j] += arr1[i][k] * arr2[k][j];
             }
-            
         }
-        
     }
-    cout<<"Ans array"<<endl;
+    cout << "Ans array" << endl;
 
     for (int i = 0; i < n1; i++)
     {
         for (int j = 0; j < n3; j++)
         {
-            cout<<ans[i][j]<<" ";
+            cout << ans[i][j] << " ";
         }
-        cout<<"\n";
+        cout << "\n";
     }
-    
-    
+
     return 0;
 }

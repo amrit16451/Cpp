@@ -1,25 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void display(vector<int> a, int n)
-{ // vector class implements dynamic array,means size automatically changes appending elements
-    for (int i = 0; i < a.size(); i++)
-    {
-        cout << a[i] << " ";
-    }
-    cout << endl;
-}
 int main()
 {
-    // Obtaining length of array
     int n;
-    cout << "enter the length of the array:";
+    cout << "enter the num of elemets:";
     cin >> n;
 
     // Declaring a vector of integers
 
     // Taking input of array of integers
-    vector<int> a(n);
+    // vector<int> a(n);
+    int a[n];
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
@@ -39,10 +31,19 @@ int main()
     }
     // OR USE
     // sort(a.begin(),a.end());
+    // sort(a,a+n); //if using array
+    cout << "permutations :" << endl;
+    int count = 0;
     do
     {
         // Display the current permutation
-        display(a, n);
-    } while (next_permutation(a.begin(), a.end()));
+        count++;
+        for (int i = 0; i < n; i++)
+        {
+            cout << a[i] << " ";
+        }
+        cout << endl;
+    } while (next_permutation(a, a + n));
+    cout << count;
     return 0;
 }

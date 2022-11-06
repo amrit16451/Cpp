@@ -15,6 +15,7 @@ int main()
         char temp = s[i];
         s[i] = s[arrSize - i - 1];
         s[arrSize - i - 1] = temp;
+        // swap(s[i],s[arrSize-i-1]);
     }
     cout << s << endl;
     return 0;

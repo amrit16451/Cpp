@@ -15,7 +15,7 @@ int main()
             {
                 /* code */
                 count = 1;
-                break;
+                
             }
         }
         if (count == 0 && num != 1)

@@ -3,33 +3,38 @@ using namespace std;
 
 int main()
 {
-	// your code goes here
 	int t;
-	std::cin >> t;
+	cin >> t;
 	while (t--)
 	{
 		int n;
 		cin >> n;
-
-		string userid_votes[n];
-		for (int i = 0; i < n + 1; i++)
+		unordered_map<string, int> _map;
+		for (int i = 0; i < n; ++i)
 		{
-			getline(cin, userid_votes[i]);
+			string name;
+			cin >> name;
+			char sign;
+			cin >> sign;
+			if (sign == '+')
+			{
+				_map[name] = 1; // key - value pair [name is key]  1 is value
+			}
+			else
+			{
+				_map[name] = -1;
+			}
 		}
-
-		vector<string> userid_votes_sort;
-
-		for (int i = 0; i < n + 1; i++)
+		// for (auto itr = _map.begin(); itr != _map.end(); itr++)
+		// {
+		// 	cout << itr->first << '\t' << itr->second
+		// 		 << '\n';
+		// }
+		int cnt = 0;
+		for (auto itr : _map)
 		{
-			userid_votes_sort.insert(userid_votes_sort.begin(), userid_votes[i]);
+			cnt += itr.second;
 		}
-
-		sort(userid_votes_sort.begin(), userid_votes_sort.end());
-
-		for (int i = 0; i < n; i++)
-		{
-			cout << userid_votes_sort[i] << " ";
-		}
+		cout << cnt << endl;
 	}
-	return 0;
 }

@@ -33,7 +33,7 @@ int main()
         {
             for (int j = 1; j <= i; j++)
             {
-                cout << power(3, j) << endl;
+                cout << power(3, j) << " ";
             }
             cout << endl;
         }

@@ -10,14 +10,18 @@ int main()
 
     for (int i = 0; i < s.size(); i++)
     {
-        /* code */
         dup.insert(s[i]);
     }
 
     for (auto i = dup.begin(); i != dup.end(); i++)
     {
-        /* code */ cout << *i;
+        cout << *i;
     }
+    // for (auto itr : dup)
+    // {
+    //     cout<<itr;
+    // }
+    
 
     return 0;
 }
