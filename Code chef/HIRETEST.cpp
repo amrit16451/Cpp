@@ -39,7 +39,7 @@ int main()
             }
             else if (crct == (x - 1) && p_crct >= y)
             {
-                cout << "0";
+                cout << "1";
             }
             else
             {

@@ -19,7 +19,7 @@ int main()
 			from_back -= k;
 		}
 		bool check = 0;
-		for (int i = 0; i < n + 1; i++)
+		for (int i = 0; i <= n + 1; i++)
 		{
 			if (position[i].first == x || position[i].second == x)
 			{

@@ -16,11 +16,11 @@ int main()
 	{
 		// for (int j = 0; j < n; j++)
 		// {
-			int mod = nums[i] % nums[j];
-			if (mod > max_mod)
-			{
-				max_mod = mod;
-			}
+		int mod = nums[i] % nums[j];
+		if (mod > max_mod)
+		{
+			max_mod = mod;
+		}
 		//}
 	}
 	std::cout << max_mod << std::endl;
